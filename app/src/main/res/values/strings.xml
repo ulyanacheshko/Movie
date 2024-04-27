@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Movie</string>
+    <string name="back_button">Back</string>
+    <string name="tvAge">13+</string>
+    <string name="tvName">Avengers: End Game</string>
+    <string name="tvTeg">Action, Adventure, Fantasy</string>
+    <string name="tvReviews">125 Reviews</string>
+    <string name="tvStoryline">Storyline</string>
+    <string name="tvDescription">After the devastating events of Avengers: Infinity War, the universe is in ruins. With the help of remaining allies, the Avengers assemble once more in order to reverse Thanos\' actions and restore balance to the universe.</string>
+    <string name="tvCast">Cast</string>
+    <string name="tvActor1">Chris Hemsworth</string>
+    <string name="tvActor2">Mark Ruffalo</string>
+    <string name="tvActor3">Chris Evans</string>
+    <string name="tvActor4">Robert Downey Jr.</string>
+    <string name="tv_movies_list_title">Movies ist</string>
+    <string name="tvDuration">137 min</string>
+</resources>
