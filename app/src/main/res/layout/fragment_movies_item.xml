@@ -4,7 +4,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/main_movies_item"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?android:attr/selectableItemBackgroundBorderless"
     android:backgroundTint="@color/background"
     tools:context=".FragmentMoviesItem">
 
@@ -12,6 +13,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/gl_start"
             android:layout_width="wrap_content"
@@ -39,93 +41,111 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             app:layout_constraintGuide_end="8dp" />
-        <com.google.android.material.imageview.ShapeableImageView
-            android:id="@+id/iv_poster"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_marginStart="2dp"
-            android:layout_marginTop="2dp"
-            android:layout_marginEnd="2dp"
-            android:scaleType="centerCrop"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:shapeAppearanceOverlay="@style/ImageView.MovieItemPoster"
-            tools:src="@tools:sample/backgrounds/scenic" />
 
         <ImageView
-            android:id="@+id/im_movie"
-            android:layout_width="394dp"
-            android:layout_height="264dp"
-            android:layout_marginTop="2dp"
-            android:scaleType="fitXY"
-            android:src="@drawable/movie"
+            android:id="@+id/imMovieImage"
+            android:layout_width="0dp"
+            android:layout_height="250dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/movie1"
+            tools:src = "@drawable/baseline_autorenew_24"
+            app:layout_constraintBottom_toTopOf="@+id/gl_bottom"
             app:layout_constraintEnd_toEndOf="@id/gl_end"
             app:layout_constraintStart_toStartOf="@id/gl_start"
             app:layout_constraintTop_toTopOf="@id/gl_top" />
 
         <ImageView
             android:id="@+id/im_like"
-            android:layout_width="16dp"
-            android:layout_height="14dp"
-            android:layout_marginEnd="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            app:layout_constraintTop_toTopOf="@id/gl_top"
+            android:layout_marginEnd="8dp"
+            android:src="@drawable/like"
             app:layout_constraintEnd_toStartOf="@id/gl_end"
-            android:src="@drawable/like" />
+            app:layout_constraintTop_toTopOf="@id/gl_top" />
 
         <TextView
-            android:id="@+id/tvAge"
+            android:id="@+id/tv_ageLimit"
             style="@style/TextView.PG"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
-
             android:text="@string/tvAge"
             app:layout_constraintStart_toStartOf="@id/gl_start"
             app:layout_constraintTop_toTopOf="@id/gl_top" />
 
         <TextView
-            android:id="@+id/tvTeg"
-            android:layout_width="188dp"
-            android:layout_height="29dp"
+            android:id="@+id/tv_teg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:text="@string/tvTeg"
             android:textColor="@color/pink"
-            app:layout_constraintStart_toStartOf="@+id/gl_start"
-            app:layout_constraintTop_toBottomOf="@+id/im_movie" />
+            android:textSize="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/ratingBar"
+            app:layout_constraintStart_toStartOf="@+id/gl_start" />
 
         <RatingBar
             android:id="@+id/ratingBar"
-            style="@style/Widget.AppCompat.RatingBar"
-            android:layout_width="238dp"
-            android:layout_height="45dp"
-            android:layout_marginStart="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminateDrawable="@drawable/star_icon_grey_"
+            android:numStars="5"
             android:progressTint="@color/pink"
-            app:layout_constraintStart_toStartOf="@+id/gl_start"
-            app:layout_constraintTop_toBottomOf="@+id/tvTeg" />
+            android:scaleX="0.4"
+            android:scaleY="0.4"
+            android:stepSize="1"
+            android:transformPivotX="0dp"
+            android:transformPivotY="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/tv_movieName"
+            app:layout_constraintStart_toStartOf="@+id/gl_start" />
 
         <TextView
-            android:id="@+id/tvName"
-            android:layout_width="154dp"
-            android:layout_height="32dp"
+            android:id="@+id/tv_reviews"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="125 reviews"
+            android:textColor="@color/grey"
+            android:textSize="8sp"
+            app:layout_constraintStart_toEndOf="@+id/tv_teg"
+            app:layout_constraintTop_toBottomOf="@+id/tv_teg" />
+
+        <TextView
+            android:id="@+id/tv_movieName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
             android:fontFamily="@font/roboto_medium"
-            android:layout_marginStart="8dp"
             android:text="@string/tvName"
             android:textColor="@color/white"
             android:textSize="14sp"
-            app:layout_constraintStart_toStartOf="@+id/gl_start"
-            app:layout_constraintTop_toBottomOf="@+id/ratingBar" />
+            app:layout_constraintBottom_toTopOf="@+id/tv_duration"
+            app:layout_constraintEnd_toStartOf="@+id/gl_end"
+            app:layout_constraintHorizontal_bias="0.117"
+            app:layout_constraintStart_toStartOf="@+id/gl_start" />
+
         <TextView
-            android:id="@+id/tvDuration"
-            android:layout_width="154dp"
-            android:layout_height="32dp"
-            android:fontFamily="@font/roboto_medium"
+            android:id="@+id/tv_duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
+            android:fontFamily="@font/roboto_medium"
             android:text="@string/tvDuration"
             android:textColor="@color/grey"
-            android:textSize="12sp"
-            app:layout_constraintStart_toStartOf="@+id/gl_start"
-            app:layout_constraintTop_toBottomOf="@+id/tvName" />
+            android:textSize="8sp"
+            app:layout_constraintBottom_toTopOf="@+id/gl_bottom"
+            app:layout_constraintStart_toStartOf="@+id/gl_start" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imMoreInfo"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="4dp"
+            android:src="@drawable/more_info"
+            app:layout_constraintEnd_toStartOf="@+id/im_like"
+            app:layout_constraintTop_toTopOf="@+id/gl_top" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

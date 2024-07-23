@@ -12,6 +12,6 @@
     <string name="tvActor2">Mark Ruffalo</string>
     <string name="tvActor3">Chris Evans</string>
     <string name="tvActor4">Robert Downey Jr.</string>
-    <string name="tv_movies_list_title">Movies ist</string>
+    <string name="tv_movies_list_title">Movies list</string>
     <string name="tvDuration">137 min</string>
 </resources>

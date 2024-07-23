@@ -57,18 +57,18 @@
             app:srcCompat="@drawable/back_icon" />
 
         <TextView
-            android:id="@+id/tvAge"
+            android:id="@+id/tv_ageLimit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="80dp"
             android:text="@string/tvAge"
             android:textColor="@color/white"
-            app:layout_constraintBottom_toTopOf="@+id/tvName"
+            app:layout_constraintBottom_toTopOf="@+id/tv_movieName"
             app:layout_constraintStart_toStartOf="@+id/guideline"
             app:layout_constraintTop_toBottomOf="@+id/backButton" />
 
         <TextView
-            android:id="@+id/tvName"
+            android:id="@+id/tv_movieName"
             android:layout_width="207dp"
             android:layout_height="103dp"
             android:layout_marginStart="4dp"
@@ -81,13 +81,13 @@
             app:layout_constraintTop_toBottomOf="@+id/backButton" />
 
         <TextView
-            android:id="@+id/tvTeg"
+            android:id="@+id/tv_teg"
             android:layout_width="192dp"
             android:layout_height="25dp"
             android:text="@string/tvTeg"
             android:textColor="@color/pink"
             app:layout_constraintStart_toStartOf="@+id/guideline"
-            app:layout_constraintTop_toBottomOf="@+id/tvName" />
+            app:layout_constraintTop_toBottomOf="@+id/tv_movieName" />
 
 
         <RatingBar
@@ -98,7 +98,7 @@
             android:layout_marginTop="12dp"
             android:progressTint="@color/pink"
             app:layout_constraintStart_toStartOf="@+id/guideline"
-            app:layout_constraintTop_toBottomOf="@+id/tvTeg" />
+            app:layout_constraintTop_toBottomOf="@+id/tv_teg" />
 
         <TextView
             android:id="@+id/tvReviews"
@@ -111,7 +111,7 @@
             android:textAllCaps="true"
             android:textColor="@color/grey"
             app:layout_constraintStart_toEndOf="@+id/ratingBar"
-            app:layout_constraintTop_toBottomOf="@+id/tvTeg" />
+            app:layout_constraintTop_toBottomOf="@+id/tv_teg" />
 
         <TextView
             android:id="@+id/tvStoryline"
@@ -149,37 +149,41 @@
             android:id="@+id/imgActor1"
             android:layout_width="80dp"
             android:layout_height="80dp"
+            android:scaleType="centerCrop"
             app:layout_constraintEnd_toStartOf="@+id/imgActor2"
             app:layout_constraintStart_toStartOf="@+id/guideline"
             app:layout_constraintTop_toBottomOf="@+id/tvCast"
-            app:srcCompat="@drawable/movie" />
+            app:srcCompat="@drawable/actor1" />
 
         <ImageView
             android:id="@+id/imgActor2"
             android:layout_width="80dp"
             android:layout_height="80dp"
+            android:scaleType= "centerCrop"
             app:layout_constraintEnd_toStartOf="@+id/imgActor3"
             app:layout_constraintStart_toEndOf="@+id/imgActor1"
             app:layout_constraintTop_toBottomOf="@+id/tvCast"
-            app:srcCompat="@drawable/movie_1" />
+            app:srcCompat="@drawable/actor2" />
 
         <ImageView
             android:id="@+id/imgActor3"
             android:layout_width="80dp"
             android:layout_height="80dp"
+            android:scaleType="centerCrop"
             app:layout_constraintEnd_toStartOf="@+id/imgActor4"
             app:layout_constraintStart_toEndOf="@+id/imgActor2"
             app:layout_constraintTop_toBottomOf="@+id/tvCast"
-            app:srcCompat="@drawable/movie_2" />
+            app:srcCompat="@drawable/actor3" />
 
         <ImageView
             android:id="@+id/imgActor4"
             android:layout_width="80dp"
             android:layout_height="80dp"
+            android:scaleType="centerCrop"
             app:layout_constraintEnd_toStartOf="@+id/guideline2"
             app:layout_constraintStart_toEndOf="@+id/imgActor3"
             app:layout_constraintTop_toBottomOf="@+id/tvCast"
-            app:srcCompat="@drawable/movie_3" />
+            app:srcCompat="@drawable/actor4" />
 
         <TextView
             android:id="@+id/tvActor1"
